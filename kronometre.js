@@ -16,6 +16,7 @@ window.onload = function () {
 
     durdurmaButonu.onclick = function () {
         clearInterval(Interval);
+        baslamaButonu.innerHTML = 'Devam';
     }
 
     sifirlamaButonu.onclick = function () {
@@ -24,6 +25,7 @@ window.onload = function () {
         saniye = "00";
         saliseElemani.innerHTML = salise;
         saniyeElemani.innerHTML = saniye;
+        baslamaButonu.innerHTML = 'Başla';
     }
 
     function zamaniBaslat() {
