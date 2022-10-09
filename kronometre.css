@@ -1,5 +1,5 @@
 body {
-    background-color: #ffa600;
+    background-color: rgb(7, 68, 4);
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     height: 100%;
 }
@@ -15,7 +15,7 @@ h1,
 h2,
 h3 {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 2.6em;
     text-transform: uppercase;
 }
@@ -35,7 +35,7 @@ button {
     border: solid 1px #fff;
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.8em;
     padding: 18px 10px;
     width: 180px;
     margin: 10px;

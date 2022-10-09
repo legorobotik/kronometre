@@ -7,15 +7,22 @@ window.onload = function () {
     var durdurmaButonu = document.getElementById('durdurma');
     var sifirlamaButonu = document.getElementById('sifirlama');
     var Interval;
+    const NONE = "none";
+    const INLINE = "inline";
 
+    swapDisplay(INLINE, NONE);
 
     baslamaButonu.onclick = function () {
         clearInterval(Interval);
         Interval = setInterval(zamaniBaslat, 10);
+        swapDisplay(NONE, INLINE);
+        baslamaButonu.style.display = "none";
+        durdurmaButonu.style.display = "inline";
     }
 
     durdurmaButonu.onclick = function () {
         clearInterval(Interval);
+        swapDisplay(INLINE, NONE);
         baslamaButonu.innerHTML = 'Devam';
     }
 
@@ -26,6 +33,7 @@ window.onload = function () {
         saliseElemani.innerHTML = salise;
         saniyeElemani.innerHTML = saniye;
         baslamaButonu.innerHTML = 'Başla';
+        swapDisplay(INLINE, NONE);
     }
 
     function zamaniBaslat() {
@@ -49,5 +57,10 @@ window.onload = function () {
         if (saniye > 9) {
             saniyeElemani.innerHTML = saniye;
         }
+    }
+
+    function swapDisplay(basla, durdur) {
+        baslamaButonu.style.display = basla;
+        durdurmaButonu.style.display = durdur;
     }
 }
